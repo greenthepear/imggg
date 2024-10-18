@@ -1,3 +1,6 @@
+[![Go Reference](https://pkg.go.dev/badge/github.com/greenthepear/imggg.svg)](https://pkg.go.dev/github.com/greenthepear/imggg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/greenthepear/imggg)](https://goreportcard.com/report/github.com/greenthepear/imggg)
+
 **imggg** - go's [**im**a**g**e](https://pkg.go.dev/image) **g**eneric **g**eometrics, reimplements [`image.Point`](https://pkg.go.dev/image#Point) and [`image.Rectangle`](https://pkg.go.dev/image#Rectangle) to work with any number type you want: `int`, `int8`, `int16`, `int32`, `int64`, `float32`, `float64` ,`uint`, `uint8`, `uint16`, `uint32`, `uint64`, `uintptr`, instead of just `int`.
 
 Features:
@@ -22,11 +25,11 @@ import (
 
 func main(){
     // Be implicit
-    floatPoint1 := Pt[float64](0.2,0.1)
+    floatPoint1 := imggg.Pt[float64](0.2,0.1)
     // Let the compiler figure it out
-    floatPoint2 := Pt(1.6,2.2)
+    floatPoint2 := imggg.Pt(1.6,2.2)
     // Use the classic methods
-    rec := Rectangle[float64]{
+    rec := imggg.Rectangle[float64]{
 		floatPoint1.Mul(10),
 		floatPoint2.Div(0.1),
 	} // (2,1)-(16,22)
