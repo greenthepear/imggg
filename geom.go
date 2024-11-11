@@ -90,6 +90,11 @@ func Pt[V Number](X, Y V) Point[V] {
 	return Point[V]{X, Y}
 }
 
+// XY returns p.X and p.Y as two variables
+func (p Point[V]) XY() (V, V) {
+	return p.X, p.Y
+}
+
 // A Rectangle contains the points with Min.X <= X < Max.X, Min.Y <= Y < Max.Y.
 // It is well-formed if Min.X <= Max.X and likewise for Y. Points are always
 // well-formed. A rectangle's methods always return well-formed outputs for
