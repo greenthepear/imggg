@@ -6,8 +6,10 @@
 Features:
 - All the same methods and functions as `image`, the code is modified directly from https://go.dev/src/image/geom.go.
 - Cast them back to the standard library equivalent with the `Std()` method.
-- Get X and Y of as two variables quickly with the `XY()` method.
+- Get X and Y of a point as two variables quickly with the `XY()` method.
 
+Library made for the **[egriden](https://github.com/greenthepear/egriden) game framework**.
+.
 > [!NOTE]
 > Using points and rectangles with floats changes their logic from the intentions of the image library, read more on [The Go Blog about the package](https://go.dev/blog/image).
 
