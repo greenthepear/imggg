@@ -52,6 +52,11 @@ func (p Point[V]) Mul(k V) Point[V] {
 	return Point[V]{p.X * k, p.Y * k}
 }
 
+// MulPt the point (p.x*q.x, p.y*q.y).
+func (p Point[V]) MulPt(q Point[V]) Point[V] {
+	return Point[V]{p.X * q.X, p.Y * q.Y}
+}
+
 // Div returns the vector p/k.
 func (p Point[V]) Div(k V) Point[V] {
 	return Point[V]{p.X / k, p.Y / k}

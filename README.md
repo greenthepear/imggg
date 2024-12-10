@@ -7,6 +7,7 @@ Features:
 - All the same methods and functions as `image`, the code is modified directly from https://go.dev/src/image/geom.go.
 - Cast them back to the standard library equivalent with the `Std()` method.
 - Get X and Y of as two variables quickly with the `XY()` method.
+- Multiply a point by another point with the `MulPt()` method.
 
 > [!NOTE]
 > Using points and rectangles with floats changes their logic from the intentions of the image library, read more on [The Go Blog about the package](https://go.dev/blog/image).
