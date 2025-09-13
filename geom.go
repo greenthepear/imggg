@@ -62,6 +62,11 @@ func (p Point[V]) Div(k V) Point[V] {
 	return Point[V]{p.X / k, p.Y / k}
 }
 
+// Dot returns the dot product of p and q.
+func (p Point[V]) Dot(q Point[V]) V {
+	return p.X*q.X + p.Y*q.Y
+}
+
 // In reports whether p is in r.
 func (p Point[V]) In(r Rectangle[V]) bool {
 	return r.Min.X <= p.X && p.X < r.Max.X &&
