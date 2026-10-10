@@ -6,6 +6,7 @@
 Features:
 - All the same methods and functions as `image`, the code is modified directly from https://go.dev/src/image/geom.go.
 - Cast them back to the standard library equivalent with the `Std()` method.
+- Cast them to any type using the `As()` method.
 - Get X and Y of a point as two variables quickly with the `XY()` method.
 - Multiply a point by another point with the `MulPt()` method.
 - Get the dot product of two points with the `Dot()` method.

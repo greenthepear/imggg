@@ -22,4 +22,9 @@ func TestGeom(t *testing.T) {
 	if Pt(2, 2).Dot(Pt(3, 3)) != 12 {
 		t.Errorf("wrong dot product")
 	}
+
+	castPoint := floatPoint1.As[int]()
+	if castPoint != Pt(0, 0) {
+		t.Errorf("wrong cast")
+	}
 }

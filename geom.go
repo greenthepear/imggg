@@ -105,6 +105,14 @@ func (p Point[V]) XY() (V, V) {
 	return p.X, p.Y
 }
 
+// As returns the point as type V2 using the standard cast
+func (p Point[V]) As[V2 Number]() Point[V2] {
+	return Point[V2]{
+		X: V2(p.X),
+		Y: V2(p.Y),
+	}
+}
+
 // A Rectangle contains the points with Min.X <= X < Max.X, Min.Y <= Y < Max.Y.
 // It is well-formed if Min.X <= Max.X and likewise for Y. Points are always
 // well-formed. A rectangle's methods always return well-formed outputs for
@@ -119,10 +127,18 @@ type Rectangle[V Number] struct {
 
 // Std returns the rectangle as the standard package's image.Rectangle type by a simple cast
 // of the two points' X and Y to ints.
-func (p Rectangle[V]) Std() image.Rectangle {
+func (r Rectangle[V]) Std() image.Rectangle {
 	return image.Rectangle{
-		p.Min.Std(),
-		p.Max.Std(),
+		r.Min.Std(),
+		r.Max.Std(),
+	}
+}
+
+// As returns the rectangle as type V2 using the standard cast
+func (r Rectangle[V]) As[V2 Number]() Rectangle[V2] {
+	return Rectangle[V2]{
+		r.Min.As[V2](),
+		r.Max.As[V2](),
 	}
 }
 

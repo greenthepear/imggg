@@ -1,5 +1,5 @@
 module github.com/greenthepear/imggg
 
-go 1.23.0
+go 1.27.0
 
-require golang.org/x/exp v0.0.0-20241009180824-f66d83c29e7c
+require golang.org/x/exp v0.0.0-20261009195045-ca0d7ba23607
