@@ -113,6 +113,12 @@ func (p Point[V]) As[V2 Number]() Point[V2] {
 	}
 }
 
+// As returns p.X and p.Y as two variables of type V2 using the standard cast.
+// Might be lighter than `p.As().XY()`.
+func (p Point[V]) AsXY[V2 Number]() (V2, V2) {
+	return V2(p.X), V2(p.Y)
+}
+
 // A Rectangle contains the points with Min.X <= X < Max.X, Min.Y <= Y < Max.Y.
 // It is well-formed if Min.X <= Max.X and likewise for Y. Points are always
 // well-formed. A rectangle's methods always return well-formed outputs for
